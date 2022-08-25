@@ -1,0 +1,41 @@
+#visHolder {
+    width: 900px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DFF6FF;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px gray;
+} 
+#tooltip {
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 10px;
+    font-size: 13px;
+    background-color: rgba(162, 162, 162, 0.86);
+    box-shadow: 1px 1px 10px black;
+    border-radius: 5px;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+g {
+    color: #06283D;
+}
+
+.bar{
+    background-color: #42855b;
+    border-color: #42855b;
+    fill: #42855b;
+}
+
+.bar:hover {
+    fill: #c5ecd0;
+}
