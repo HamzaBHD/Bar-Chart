@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+### User Story #1: 
+My chart should have a title with a corresponding id="title".
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### User Story #2: 
+My chart should have a g element x-axis with a corresponding id="x-axis".
 
-## Available Scripts
+### User Story #3: 
+My chart should have a g element y-axis with a corresponding id="y-axis".
 
-In the project directory, you can run:
+### User Story #4: 
+Both axes should contain multiple tick labels, each with a corresponding class="tick".
 
-### `npm start`
+### User Story #5: 
+My chart should have a rect element for each data point with a corresponding class="bar" displaying the data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### User Story #6: 
+Each bar should have the properties data-date and data-gdp containing date and GDP values.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### User Story #7: 
+The bar elements' data-date properties should match the order of the provided data.
 
-### `npm test`
+### User Story #8: 
+The bar elements' data-gdp properties should match the order of the provided data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Story #9: 
+Each bar element's height should accurately represent the data's corresponding GDP.
 
-### `npm run build`
+### User Story #10:
+ The data-date attribute and its corresponding bar element should align with the corresponding value on the x-axis.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### User Story #11:
+ The data-gdp attribute and its corresponding bar element should align with the corresponding value on the y-axis.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### User Story #12:
+ I can mouse over an area and see a tooltip with a corresponding id="tooltip" which displays more information about the area.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### User Story #13:
+ My tooltip should have a data-date property that corresponds to the data-date of the active area.
