@@ -6,10 +6,9 @@ const LineChart = ({data, width, height, widthOfBar, padding}) => {
     
     useEffect(() => {
         createChart();
-    }, [data])
+    })
 
     const createChart = () => {
-        const values = data.map(item => item[1])
         const dates = data.map(item => new Date(item[0]))
         
         const years = data.map(item => {
@@ -27,15 +26,13 @@ const LineChart = ({data, width, height, widthOfBar, padding}) => {
 
             return item[0].substring(0,4) + ' ' + quarter;
         })
-
+        
             
-        const tooltip = d3.select('#visHolder')
-                          .append('div')
-                          .attr('id', "tooltip")
+        const tooltip = d3.select('#tooltip')
                           .style('visibility', 'hidden')
 
         const xScale = d3.scaleLinear()
-                         .domain([0, data.length - 1 ])
+                         .domain([0, data.length -1])
                          .range([padding, width - padding])
 
         const yScale = d3.scaleLinear()
@@ -77,9 +74,10 @@ const LineChart = ({data, width, height, widthOfBar, padding}) => {
         .on('mouseover', (e ,item) => {
             tooltip
                     .style('visibility', 'visible')
-                    .html(`${years[data.indexOf(item)]}` + ` <br/> $${item[1]} Billion`)
+                    .html(`${years[data.indexOf(item)]} <br/> $${item[1]} Billion`)
                     .style('left', (e.pageX - (widthOfBar - 20)) + 'px')
                     .style('top', (e.pageY - 40) + 'px')
+                    document.querySelector('#tooltip').setAttribute('data-date', item[0])
             })
             .on('mouseout', () => {
                 tooltip.style('visibility', 'hidden');
@@ -96,10 +94,7 @@ const LineChart = ({data, width, height, widthOfBar, padding}) => {
             }
 
     return (
-        <div id='visHolder'>
-            <h1 id='title'>United States GDP</h1>
-            <svg width={width} height={height}></svg>
-        </div>
+            <svg id='svgContainer' width={width} height={height}></svg>
     )
 } 
 

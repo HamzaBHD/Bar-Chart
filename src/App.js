@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import LineChart from './LineChart';
 
@@ -11,13 +11,15 @@ function App() {
         .then(data => setData(data.data))
   }, [])
 
-  const width = 800;
+  const width = 1000;
   const height = 600;
-  const padding = 40; 
+  const padding = 60; 
   const widthOfBar = width / data.length;
 
   return (
     <div className="main">
+      <h1 id='title'>United States GDP</h1>
+      <div id='tooltip'></div>
       <LineChart
         padding={padding}
         width={width}

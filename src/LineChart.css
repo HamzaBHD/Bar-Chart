@@ -1,14 +1,8 @@
-#visHolder {
-    width: 900px;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #DFF6FF;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px gray;
-} 
+#svgContainer {
+    background-color: #FFF;
+    box-shadow: 0 0 10px gray;
+}
+
 #tooltip {
     text-align: center;
     width: 120px;
@@ -19,11 +13,11 @@
     position: absolute;
     padding: 10px;
     font-size: 13px;
-    background-color: rgba(162, 162, 162, 0.86);
-    box-shadow: 1px 1px 10px black;
+    background-color: rgba(255, 255, 255, 0.86);
+    box-shadow: 1px 1px 10px grey;
     border-radius: 5px;
-    pointer-events: none;
     cursor: pointer;
+    pointer-events: none;
 }
 
 g {
@@ -31,9 +25,8 @@ g {
 }
 
 .bar{
-    background-color: #42855b;
-    border-color: #42855b;
-    fill: #42855b;
+    cursor: pointer;
+    fill: #54BAB9;
 }
 
 .bar:hover {
